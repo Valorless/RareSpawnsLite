@@ -65,19 +65,19 @@ RareSpawns is a Spigot/Paper plugin that adds fully configurable, data‑driven 
 ## Highlights
 
 - Data‑driven rare entity system (YAML) with spawn groups, weights, biome/time/weather filters.
-- Standalone custom items (loot, keys, utilities) with progression features (Soul Harvester).
+- Standalone custom items (loot, keys, utilities) with progression features ([Soul Harvester](https://github.com/Valorless/RareSpawnsLite/wiki/soulharvestercomponent)).
 - Upgrade chain system: attributes, enchantments, model data, lore/name, item model swaps, powers.
 - Player‑facing Soul Powers (runtime compiled Java) unlocked through item progression.
 - Ability system for rare entities (packaged + extensible runtime compilation).
 - Power Items (BREAK, REDSTONE, TROWEL) enabling block manipulation or placement mechanics.
-- Integration hooks: WorldGuard, GriefPrevention, mcMMO, Nexo / ItemsAdder / Oraxen (soft).
+- Integration: WorldGuard, GriefPrevention, mcMMO, Nexo / ItemsAdder / Oraxen (soft).
 - Lightweight Java API for detection, ID resolution, programmatic spawns, listings.
 - Opt‑out command for players who do not want rares spawning near them.
-- Minimal dependencies; only requires Java 17+ and a JDK if you use runtime compilation features.
+- Minimal dependencies; only requires Java 21+, a JDK if you use runtime compilation features, and [ValorlessUtils](https://github.com/Valorless/ValorlessUtils/releases).
 
 ---
 
-## For Server Owners (Users)
+## For Server Owners & Players
 
 ### Feature Overview
 
@@ -116,8 +116,8 @@ RareSpawns is a Spigot/Paper plugin that adds fully configurable, data‑driven 
 | Command | Description | Permission |
 |---------|-------------|------------|
 | `/rarespawns reload` | Reload configuration & content (abilities/items/entities). | `rarespawns.reload` |
-| `/rarespawns item <id> [player|random]` | Give a custom item to self/other/random. | `rarespawns.item` |
-| `/rarespawns spawn <entityId> [player]` | Spawn a rare entity at self/target player. | `rarespawns.spawn` |
+| `/rarespawns item <id> [random]` | Give a custom item to self with fixed or random stats. | `rarespawns.item` |
+| `/rarespawns spawn <id> [player]` | Spawn a rare entity at self/target player. | `rarespawns.spawn` |
 | `/rarespawns kill <radius>` | Kill rares within radius around sender. | `rarespawns.kill` |
 | `/rarespawns optout` | Toggle rare spawn opt‑out. | `rarespawns.optout` |
 
@@ -213,6 +213,7 @@ Players can run `/rarespawns optout` to toggle whether natural rare spawns consi
 ## For Developers
 
 ### API Surface (Quick Reference)
+I recommend reading the [API Wiki](https://github.com/Valorless/RareSpawnsLite/wiki/API)
 
 Static methods (see full docs at [API Docs](https://valorless.github.io/RareSpawns)):
 
@@ -255,7 +256,7 @@ Synchronous Bukkit events you can listen to:
 - Implement interfaces (`Ability`, `SoulPower`) & annotate (`@AbilityInfo`, `@SoulPowerInfo`).
 - Place source in data folders (`abilities/` or `soulpowers/`) default package, no package line.
 - Requires JDK; server compiles them asynchronously on reload/start.
-- Soul Powers: triggers (`onAttack`, `onDefence`, `onKill`, `onEquip`) with chance, cooldown, failCooldown semantics.
+- Soul Powers: triggers (`onAttack`, `onDefence`, `onKill`) with chance, cooldown, failCooldown semantics.
 
 ### Item & Entity Data Model
 
@@ -279,20 +280,6 @@ Synchronous Bukkit events you can listen to:
 - Wrap Soul Harvester progression for custom reward gating.
 - Introduce new runtime powers or abilities for dynamic effects (avoid blocking operations).
 
-### Building from Source
-
-Requires:
-- Java 17+ (JDK)
-- Maven
-
-Steps:
-```bash
-git clone https://github.com/Valorless/RareSpawns.git
-cd RareSpawns
-mvn clean package
-```
-Resulting plugin JAR in `target/`.
-
 ### Contributing
 
 Suggestions & issues welcome:
@@ -304,18 +291,18 @@ Suggestions & issues welcome:
 
 - Native RareSpawns PlaceholderAPI placeholders.
 - Additional Soul Power triggers (onEquip refinement, onBlockPlace, onFish success).
-- Configurable minion AI profiles.
+- Configurable AI profiles.
 - Extended upgrade actions: particle trails, timed buffs, conditional triggers.
-- Web-based config viewer/export.
+- Web-based config viewer/export. (More like wishful thinking atm)
 
 ---
 
 ## License
 
-License will be added / clarified (TBD). Until formal license is published, treat source as all-rights-reserved to the author; do not redistribute compiled builds without permission.
+License will be added / clarified (TBD). Until formal license is published, treat source as all-rights-reserved; do not redistribute compiled builds without permission.
 
 ---
 
-For full documentation, examples, and integration guides visit the [Docs Site](https://valorless.github.io/RareSpawns). Feel free to open issues for feature requests or clarification.
+For full documentation, examples, and integration guides visit the [Docs Site](https://valorless.github.io/RareSpawns) & [Wiki Page](https://github.com/Valorless/RareSpawnsLite/wiki). Feel free to open issues for feature requests or clarification.
 
 Enjoy crafting your world’s rare encounters!
