@@ -8,7 +8,7 @@
 [![](https://img.shields.io/spiget/tested-versions/110420?label=Tested%20Version)]()
 [![](https://img.shields.io/badge/Requires-ValorlessUtils-red?style=flat)]()
 [![](https://img.shields.io/github/issues/valorless/RareSpawnsLite?label=Issues)]()
-[![](https://img.shields.io/bstats/servers/18791?label=Servers)]()
+[![](https://img.shields.io/bstats/servers/27928?label=Servers)]()
 
 Lite: 
 [![](https://img.shields.io/spiget/downloads/110420?label=Downloads)]()
