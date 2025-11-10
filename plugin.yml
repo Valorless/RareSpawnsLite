@@ -4,7 +4,17 @@ version: version-number
 author: Valorless
 api-version: 1.18
 depend: [ValorlessUtils]
-soft-depend: [PlaceholderAPI, Nexo, WorldGuard, mcMMO, GriefPrevention]
+website: 'https://github.com/Valorless/RareSpawnsLite'
+soft-depend:
+- PlaceholderAPI
+#- Nexo
+- WorldGuard
+- mcMMO
+- GriefPrevention
+loadbefore:
+- Nexo
+- ItemsAdder
+- Oraxen
 commands:
   rarespawns:
     description: Main command.
