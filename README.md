@@ -1,7 +1,7 @@
 # RareSpawns
  
 [![Build Plugin](https://github.com/Valorless/RareSpawns/actions/workflows/maven.yml/badge.svg?branch=main)]()
-[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Valorless/RareSpawnsLite/total?label=Github%20Downloads)]()
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/valorless/RareSpawnsLite/total?label=Github%20Downloads)]()
 [![](https://img.shields.io/github/v/release/valorless/RareSpawnsLite?label=Latest%20Release)]()
 [![Java](https://img.shields.io/badge/Java-21+-orange)](#)
 
