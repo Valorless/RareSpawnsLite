@@ -16,6 +16,7 @@ conditions:
  biome-blacklist: false # Treat biomes as a blacklist.
  weather: CLEAR # CLEAR, RAIN or THUNDER
  time: DAY # SUNRISE, DAY, SUNSET, NIGHT or a custom range like '0-24000'
+ in-water: false
 
 # Everything except 'type' is optional.
 
