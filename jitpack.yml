@@ -1,3 +1,3 @@
 install:
-  # Keep the whole mvn deploy:deploy-file command on a single line so options are not split into separate commands.
-  - mvn -B deploy:deploy-file -DgroupId=com.github.Valorless -DartifactId=RareSpawnsAPI -Dversion=1.0.0 -Dpackaging=jar -Dfile=RareSpawnsAPI-1.0.0.jar -Durl=file://$HOME/.m2/repository -DrepositoryId=local
+  - mvn -B deploy:deploy-file -DgroupId=valorless.rarespawns -DartifactId=RareSpawns -Dversion=1.0.0 -Dpackaging=jar -Dfile=RareSpawns-1.0.0.beta.908.jar -Durl=file://$HOME/.m2/repository -DrepositoryId=local
+  - mvn -B deploy:deploy-file -DgroupId=valorless.rarespawns -DartifactId=RareSpawns -Dversion=1.0.0 -Dclassifier=javadoc -Dpackaging=jar -Dfile=RareSpawns-1.0.0.beta.908-javadoc.jar -Durl=file://$HOME/.m2/repository -DrepositoryId=local
