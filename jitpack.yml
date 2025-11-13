@@ -2,4 +2,8 @@ install:
   - mvn -B deploy:deploy-file -DgroupId=com.github.Valorless -DartifactId=RareSpawnsAPI -Dversion=1.0.0 -Dpackaging=jar -Dfile=RareSpawnsAPI-1.0.0.jar -Durl=file://$HOME/.m2/repository -DrepositoryId=local
   - mvn -B deploy:deploy-file -DgroupId=com.github.Valorless -DartifactId=RareSpawnsAPI -Dversion=1.0.0 -Dclassifier=javadoc -Dpackaging=jar -Dfile=RareSpawnsAPI-1.0.0-javadoc.jar -Durl=file://$HOME/.m2/repository -DrepositoryId=local
   - mvn -B deploy:deploy-file -DgroupId=com.github.Valorless -DartifactId=RareSpawnsAPI -Dversion=1.0.0 -Dclassifier=sources -Dpackaging=jar -Dfile=RareSpawnsAPI-1.0.0-sources.jar -Durl=file://$HOME/.m2/repository -DrepositoryId=local
-  - mvn -B -DskipTests install
+#  - mvn -B -DskipTests install
+  
+#  install:
+#  # Keep the whole mvn deploy:deploy-file command on a single line so options are not split into separate commands.
+#  - mvn -B deploy:deploy-file -DgroupId=com.github.Valorless -DartifactId=RareSpawnsAPI -Dversion=1.0.0 -Dpackaging=jar -Dfile=RareSpawnsAPI-1.0.0.jar -Durl=file://$HOME/.m2/repository -DrepositoryId=local
