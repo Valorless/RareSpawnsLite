@@ -1,0 +1,9 @@
+install:
+  - mvn -B deploy:deploy-file \
+      -DgroupId=com.github.Valorless \
+      -DartifactId=RareSpawnsAPI \
+      -Dversion=1.0.0 \
+      -Dpackaging=jar \
+      -Dfile=RareSpawnsAPI-1.0.0.jar \
+      -Durl=file://$HOME/.m2/repository \
+      -DrepositoryId=local

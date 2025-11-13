@@ -1,0 +1,20 @@
+plugins {
+    id 'maven-publish'
+}
+
+group = 'com.github.Valorless' // change if you want a different group
+version = '1.0.0' // must match your jar version
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'RareSpawnsAPI' // choose the artifactId you want
+            artifact file('RareSpawnsAPI-1.0.0.jar')
+        }
+    }
+}
+
+// Make `gradle build` publish to the local maven repository so JitPack picks it up
+tasks.register('build') {
+    dependsOn 'publishToMavenLocal'
+}
